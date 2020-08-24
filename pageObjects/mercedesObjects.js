@@ -30,7 +30,12 @@ module.exports = {
 
         exterior: 'button[id="exterior"]',
         entertainmentAndConvenience: 'button[id="entertainment"]',
+        performanceAndSafety: 'button[id="performance"]',
+        serviceAndCare: 'button[id="service"]',
+        summary: 'button[id="summary"]',
 
+        //exterior
+            //color
         black: 'img[alt="Select black"]',
         polarWhite: 'img[alt="Select Polar White"]',
         obsidianBlack: 'img[alt="Select Obsidian Black metalic"]',
@@ -41,6 +46,7 @@ module.exports = {
         emeraldGreen: 'img[alt="Select Emerald Green metalic"]',
         seleniteGrey: 'img[alt="Select Selenite Grey metalic"]',
         cardinalRed: 'img[alt="Select designo Cardinal Red metalic"]',
+            //wheels
         diamondWhite: 'img[alt="Select designo Diamond White metalic"]',
         wheels21inch: 'img[alt="Select 21-inch AMG twin 5-spoke"]',
         wheels21inchBlack: 'img[alt="Select 21-inch AMG twin 5-spoke w/ black accents"]',
@@ -50,9 +56,43 @@ module.exports = {
         wheels22inchBlack: {
             selector: '(//img[@alt="Select No-Image"])[2]',
             locateStrategy: 'xpath'},
+            //options
+                //check boxes 1-4
+
+        //interior
+            //upholstery
+        blackRedStitching: '[alt="Select Black MB-Tex w/Red stitching"]',
+        blackNappaLeather: '[alt="Select Black Nappa leather"]',
+        tartufoBlackNappa: '([alt="Select No-Image"])[0]',
+        classicRedBlackNappa: '([alt="Select No-Image"])[1]',
+        blackExclusive: '([alt="Select No-Image"])[2]',
+        tartufoBlackExclusive: '([alt="Select No-Image"])[3]',
+        classicRedBlackExclusive: '([alt="Select No-Image"])[4]',
+        blackExclusiveLeather: '([alt="Select No-Image"])[5]',
+            //trim
+        greyLindenWood: '[alt="Select Grey Linden wood"]',
+        aluminumGrain: '[alt="Select Aluminum with longitudinal grain"]',
+        GreyOak: '[alt="Select Natural Grain Grey Oak wood"]',
+        brownWalnut: '[alt="Select Natural Grain Brown Walnut wood"]',
+        designoFlamedAsh: '[alt="Select designo Natural Grain Black Flamed Ash wood"]',
+        designoBrownLinden: "[src='/content/dam/mb-nafta/us/myco/my20/swatches/trim/BYO-TRIM-THUMBNAIL-H34.jpg']",
+        metalWeave: '[alt="Select Metal Weave"]',
+        carbonFiber: '[alt="Select AMG Carbon Fiber"]',
+            //options
+                //check boxes 1-10
+
+        //entertainment/Convenience
+            //checkboxes 1-18
+        //Performance/Safety
+            //check boxes 1-12
+        //Service/care
+            //check boxes 1-9
+
+
+        //Summary    
+         
         
         //Selectors for check boxes
-
         checkBox1: { //ex: amg Night package, in: heated steering wheel, ent: warmth/comfort, per: driver assistance, ser: 2 year
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[0]',
             locateStrategy: 'xpath'},
