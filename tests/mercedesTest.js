@@ -1,16 +1,16 @@
-var pageObjectName = {}
+var mercedes = {}
 module.exports = {
     beforeEach: browser => {
-        pageObjectName = browser.page.mercedesObjects()
-        pageObjectName.navigate()
-            //.waitForElementVisible(something)
+        mercedes = browser.page.mercedesObjects()
+        mercedes.navigate()
+            .waitForElementVisible('@loadedPage')
 
     },
     after: browser => {
-        pageObjectName.end()
+        mercedes.end()
     },
     'Whatever Tests We Are Running': browser => {
-        pageObjectName
+        mercedes
 
     }
 }
