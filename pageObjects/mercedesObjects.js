@@ -29,6 +29,8 @@ module.exports = {
         nextButton: 'button[class="button button_primary button--wide button--full-width-small-only mbs-build-steps__cta"]',
 
         exterior: 'button[id="exterior"]',
+        entertainmentAndConvenience: 'button[id="entertainment"]',
+
         black: 'img[alt="Select black"]',
         polarWhite: 'img[alt="Select Polar White"]',
         obsidianBlack: 'img[alt="Select Obsidian Black metalic"]',
@@ -48,73 +50,61 @@ module.exports = {
         wheels22inchBlack: {
             selector: '(//img[@alt="Select No-Image"])[2]',
             locateStrategy: 'xpath'},
-        nightPackage: {
-            selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[0]',
-            locateStrategy: 'xpath'},
-        runningBoards: {
-            selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[1]',
-            locateStrategy: 'xpath'},
-        illuminatedStar: {
-            selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[2]',
-            locateStrategy: 'xpath'},
-        chromeHandle: {
-            selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[3]',
-            locateStrategy: 'xpath'},
         
+        //Selectors for check boxes
 
-        entertainmentAndConvenience: 'button[id="entertainment"]',
-        warmthAndComfort: {
+        checkBox1: { //ex: amg Night package, in: heated steering wheel, ent: warmth/comfort, per: driver assistance, ser: 2 year
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[0]',
             locateStrategy: 'xpath'},
-        airBalance: {
+        checkBox2: { //ex: illuminated running, in: topstitched, ent: air balance, per: AMG dynamic, ser: 3 year
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[1]',
             locateStrategy: 'xpath'},
-        energizing: {
+        checkBox3: { //ex: illuminated star, in: acoustic comfort, ent: energizing package, per: speed limit assist, ser: 4 year
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[2]',
             locateStrategy: 'xpath'},
-        ventilatedSeats: {
+        checkBox4: { //ex: chrome door handle, in: performance steering wheel, ent: ventilated front, per: trailer hitch, ser: me connect service
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[3',
             locateStrategy: 'xpath'},
-        massageSeats: {
+        checkBox5: { //in: replace w/black seat belt, ent: multicontour seat, per: high preformance brakes, ser: me connect assist service
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[4]',
             locateStrategy: 'xpath'},
-        rapidHeatSeats: {
+        checkBox6: { //in: red seat belt, ent: rapid heating seats, per: exhaust system, ser: me in-car WIFI
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[5]',
             locateStrategy: 'xpath'},
-        heated2ndRow: {
+        checkBox7: { //in: DINAMICA headliner, ent: heated 2nd row, per: drive unit, ser: driver's floor mats
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[6]',
             locateStrategy: 'xpath'},
-        cupholders: {
+        checkBox8: { //in: door pin, ent: heated cup holders, per: Track Pace, ser: rear floor mats
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[7]',
             locateStrategy: 'xpath'},
-        climateControl: {
+        checkBox9: { //in: LED projectors, ent: 4 zone climate, per: wheel locking bolts, ser: concertina load sill
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[8]',
             locateStrategy: 'xpath'},
-        surroundSound: {
+        checkBox10: { //ent: Burmester 3d surround sound, per: surround view
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[9]',
             locateStrategy: 'xpath'},
-        navigation: {
+        checkBox11: { //ent: augmented video, per: adapter for trailer
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[10]',
             locateStrategy: 'xpath'},
-        softDoors: {
+        checkBox12: { //ent: soft close doors, per: tyre pressure gauge
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[11]',
             locateStrategy: 'xpath'},
-        interiorAssistant: {
+        checkBox13: { //ent: interior assitant
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[12]',
             locateStrategy: 'xpath'},
-        heatedWindshield: {
+        checkBox14: { //ent: heated windshield
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[13]',
             locateStrategy: 'xpath'},
-        headUpDisplay: {
+        checkBox15: { //ent: head up display
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[14]',
             locateStrategy: 'xpath'},
-        bikeRack: {
+        checkBox16: { //ent: bicycle rack
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[15]',
             locateStrategy: 'xpath'},
-        rearEntertainment: {
+        checkBox17: { //ent: rear seat entertainment
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[16]',
             locateStrategy: 'xpath'},
-        luggageNet: {
+        checkBox18: { //ent: luggage net
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[17]',
             locateStrategy: 'xpath'},
 
