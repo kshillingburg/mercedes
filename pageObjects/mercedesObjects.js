@@ -64,12 +64,25 @@ module.exports = {
             //upholstery
         blackRedStitching: 'img[alt="Select Black MB-Tex w/Red stitching"]',
         blackNappaLeather: 'img[alt="Select Black Nappa leather"]',
-        tartufoBlackNappa: '(img[alt="Select No-Image"])[0]',
-        classicRedBlackNappa: '(img[alt="Select No-Image"])[1]',
-        blackExclusive: '(img[alt="Select No-Image"])[2]',
-        tartufoBlackExclusive: '(img[alt="Select No-Image"])[3]',
-        classicRedBlackExclusive: '(img[alt="Select No-Image"])[4]',
-        blackExclusiveLeather: '(img[alt="Select No-Image"])[5]',
+        tartufoBlackNappa: { 
+            selector: '(//img[@alt="Select No-Image"])[1]', 
+            locateStrategy: 'xpath'},
+        classicRedBlackNappa: { 
+            selector: '(//img[@alt="Select No-Image"])[2]', 
+            locateStrategy: 'xpath'},
+        blackExclusive: { 
+            selector: '(//img[@alt="Select No-Image"])[3]', 
+            locateStrategy: 'xpath'},
+        tartufoBlackExclusive: { 
+            selector: '(//img[@alt="Select No-Image"])[4]', 
+            locateStrategy: 'xpath'},
+        classicRedBlackExclusive: { 
+            selector: '(//img[@alt="Select No-Image"])[5]', 
+            locateStrategy: 'xpath'},
+        blackExclusiveLeather: { 
+            selector: '(//img[@alt="Select No-Image"])[6]', 
+            locateStrategy: 'xpath'},
+
             //trim
         greyLindenWood: '[alt="Select Grey Linden wood"]',
         aluminumGrain: '[alt="Select Aluminum with longitudinal grain"]',
