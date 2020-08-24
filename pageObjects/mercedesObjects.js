@@ -1,3 +1,25 @@
+var mercedesCommands = {
+    /*Custom command that will be used to make any change
+    and will accept the change when the prompt to add
+    additional features that are required*/
+    makeChanges: function(change) {
+        var self = this
+        this.click(change)
+        this.pause(500)
+        this.api.element("css selector",'.mbs-remediation-modal', function(visible) {        
+            if(visible.status ===0) {
+                self.api.useXpath()
+                self.click('//button[contains(text(),"Make Changes")]')
+                self.api.useCss()
+            }
+            else {}
+        })
+        return this
+        
+    }
+}
+
+
 module.exports = {
     url: 'https://www.mbusa.com/en/vehicles/build/gle/coupe/gle53c4?category=exterior',
     elements: {
@@ -93,5 +115,7 @@ module.exports = {
         luggageNet: {
             selector: '(//label[@class="form__checkbox-label form__checkbox-label--hidden"])[18]',
             locateStrategy: 'xpath', },
+
+
     }
 }
