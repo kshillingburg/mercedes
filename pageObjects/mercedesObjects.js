@@ -22,6 +22,7 @@ var mercedesCommands = {
 
 module.exports = {
     url: 'https://www.mbusa.com/en/vehicles/build/gle/coupe/gle53c4?category=exterior',
+    commands: [mercedesCommands],
     elements: {
         loadedPage: '#step-container',
         
