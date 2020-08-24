@@ -28,6 +28,7 @@ module.exports = {
         
         nextButton: 'button[class="button button_primary button--wide button--full-width-small-only mbs-build-steps__cta"]',
 
+        //navigation labels
         exterior: 'button[id="exterior"]',
         entertainmentAndConvenience: 'button[id="entertainment"]',
         performanceAndSafety: 'button[id="performance"]',
@@ -90,7 +91,8 @@ module.exports = {
 
 
         //Summary    
-         
+        totalBuild: '.mbs-build-summary-banner__total',
+        estimateLeas: '(.mbs-build-estimate-summary__estimate)[0]',
         
         //Selectors for check boxes
         checkBox1: { //ex: amg Night package, in: heated steering wheel, ent: warmth/comfort, per: driver assistance, ser: 2 year
