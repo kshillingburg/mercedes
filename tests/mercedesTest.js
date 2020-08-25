@@ -1,5 +1,13 @@
 var mercedes = {}
 
+//Callback
+var costSummaries = function (manager) {
+    manager
+        .getText('@runningTotalBuild', function (result) {
+            console.log(result.value)
+        })
+}
+
 module.exports = {
     beforeEach: browser => {
         mercedes = browser.page.mercedesObjects()
@@ -110,13 +118,15 @@ module.exports = {
             .makeChanges('@checkBox1')
             .makeChanges('@checkBox2')
             .makeChanges('@checkBox3')
-            .click('@nextButton')
+            costSummaries(mercedes)
+            mercedes.click('@nextButton')
             .pause(500)
             .makeChanges('@blackNappaLeather')
             .makeChanges('@greyOak')
             .makeChanges('@checkBox7')
             .makeChanges('@checkBox8')
-            .click('@nextButton')
+            costSummaries(mercedes)
+            mercedes.click('@nextButton')
             .makeChanges('@checkBox4')
             .makeChanges('@checkBox5')
             .makeChanges('@checkBox6')
@@ -125,13 +135,16 @@ module.exports = {
             .makeChanges('@checkBox10')
             .makeChanges('@checkBox12')
             .makeChanges('@checkBox15')
-            .click('@nextButton')
+            costSummaries(mercedes)
+            mercedes.click('@nextButton')
             .makeChanges('@checkBox10')
-            .click('@nextButton')
+            costSummaries(mercedes)
+            mercedes.click('@nextButton')
             .makeChanges('@checkBox3')
             .makeChanges('@checkBox7')
             .makeChanges('@checkBox8')
-            .click('@nextButton')
+            costSummaries(mercedes)
+            mercedes.click('@nextButton')
             .expect.element('@totalBuild').text.to.contain('Total Build $98,524')
        },
        'Kyle Dream Car': browser => {
