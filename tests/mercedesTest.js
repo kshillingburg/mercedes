@@ -93,8 +93,37 @@ module.exports = {
             .makeChanges('@checkBox8')
             .click('@nextButton')
             .expect.element('@totalBuild').text.to.contain('Total Build $95,604')
+        },
+        'Bri Dream Car': browser => {
+            mercedes
+            .waitForElementVisible('@polarWhite')
+            .makeChanges('@polarWhite')
+            .makeChanges('@wheels22inchBlack')
+            .makeChanges('@checkBox1')
+            .makeChanges('@checkBox2')
+            .makeChanges('@checkBox3')
+            .click('@nextButton')
+            .pause(500)
+            .makeChanges('@blackNappaLeather')
+            .makeChanges('@greyOak')
+            .makeChanges('@checkBox7')
+            .makeChanges('@checkBox8')
+            .click('@nextButton')
+            .makeChanges('@checkBox4')
+            .makeChanges('@checkBox5')
+            .makeChanges('@checkBox6')
+            .makeChanges('@checkBox7')
+            .makeChanges('@checkBox8')
+            .makeChanges('@checkBox10')
+            .makeChanges('@checkBox12')
+            .makeChanges('@checkBox15')
+            .click('@nextButton')
+            .makeChanges('@checkBox10')
+            .click('@nextButton')
+            .makeChanges('@checkBox3')
+            .makeChanges('@checkBox7')
+            .makeChanges('@checkBox8')
+            .click('@nextButton')
+            .expect.element('@totalBuild').text.to.contain('Total Build $98,524')
+        }
     }
-
-}
-
-}

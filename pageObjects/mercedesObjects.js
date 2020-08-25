@@ -86,7 +86,7 @@ module.exports = {
             //trim
         greyLindenWood: '[alt="Select Grey Linden wood"]',
         aluminumGrain: '[alt="Select Aluminum with longitudinal grain"]',
-        GreyOak: '[alt="Select Natural Grain Grey Oak wood"]',
+        greyOak: '[alt="Select Natural Grain Grey Oak wood"]',
         brownWalnut: '[alt="Select Natural Grain Brown Walnut wood"]',
         designoFlamedAsh: '[alt="Select designo Natural Grain Black Flamed Ash wood"]',
         designoBrownLinden: "[src='/content/dam/mb-nafta/us/myco/my20/swatches/trim/BYO-TRIM-THUMBNAIL-H34.jpg']",
