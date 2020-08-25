@@ -126,6 +126,42 @@ module.exports = {
             .expect.element('@totalBuild').text.to.contain('Total Build $98,524')
        },
        'Kyle Dream Car': browser => {
+            
+            mercedes
+                //exterior
+                .makeChanges('@brilliantBlue')
+                .makeChanges('@wheels21inchBlack')
+                //interior
+                .click('@interior')
+                .makeChanges('@classicRedBlackNappa')
+                .makeChanges('@aluminumGrain')
+                .makeChanges('@checkBox3')
+                //Entertainment
+                .click('@entertainmentAndConvenience')
+                .makeChanges('@checkBox2')
+                .makeChanges('@checkBox4')
+                .makeChanges('@checkBox5')
+                .makeChanges('@checkBox9')
+                .makeChanges('@checkBox10')
+                .makeChanges('@checkBox12')
+                .makeChanges('@checkBox18')
+                //Performance
+                .click('@performanceAndSafety')
+                .makeChanges('@checkBox1')
+                .makeChanges('@checkBox5')
+                .makeChanges('@checkBox7')
+                .makeChanges('@checkBox10')
+                //Service
+                .click('@serviceAndCare')
+                .makeChanges('@checkBox1')
+                .makeChanges('@checkBox4')
+                .makeChanges('@checkBox5')
+                .makeChanges('@checkBox6')
+                .makeChanges('@checkBox7')
+                .makeChanges('@checkBox8')
+                //Summary
+                .click('@summary')
+                .expect.element('@totalBuild').text.to.contain('Total Build $96,224')
 
        }
     }

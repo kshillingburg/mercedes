@@ -47,8 +47,8 @@ module.exports = {
         emeraldGreen: 'img[alt="Select Emerald Green metallic"]',
         seleniteGrey: 'img[alt="Select Selenite Grey metallic"]',
         cardinalRed: 'img[alt="Select designo Cardinal Red metallic"]',
-            //wheels
         diamondWhite: 'img[alt="Select designo Diamond White metallic"]',
+        //wheels
         wheels21inch: 'img[alt="Select 21-inch AMG twin 5-spoke"]',
         wheels21inchBlack: 'img[alt="Select 21-inch AMG twin 5-spoke w/black accents"]',
         wheels22inch: {
