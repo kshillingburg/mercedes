@@ -61,7 +61,7 @@ module.exports = {
             .makeChanges('@checkBox8')
             .makeChanges('@checkBox9')
             .click('@summary')
-            .expect.element('@totalBuild').text.to.equal("Total Build $117,211.5")
+            .expect.element('@totalBuild').text.to.contain("Total Build $117,211.5")
     },
     'Quincy Dream Car': browser => {
         mercedes
