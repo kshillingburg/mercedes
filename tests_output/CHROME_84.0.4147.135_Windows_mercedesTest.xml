@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="0"
+<testsuites errors="1"
             failures="0"
-            tests="4">
+            tests="1">
 
   <testsuite name="mercedesTest"
-    errors="0" failures="0" hostname="" id="" package="mercedesTest" skipped="0"
-    tests="4" time="101.1" timestamp="">
+    errors="1" failures="0" hostname="" id="" package="mercedesTest" skipped="3"
+    tests="1" time="32.42" timestamp="">
   
-    <testcase name="Make the most expensive car" classname="mercedesTest" time="36.81" assertions="2">
+    <testcase name="Make the most expensive car" classname="mercedesTest" time="32.42" assertions="1">
 
     
-
-    
-    </testcase>
-  
-    <testcase name="Quincy Dream Car" classname="mercedesTest" time="24.08" assertions="2">
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Bri Dream Car" classname="mercedesTest" time="20.40" assertions="3">
-
-    
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Kyle Dream Car" classname="mercedesTest" time="19.79" assertions="2">
-
-    
-
+    <error message="Cannot read property &#39;click&#39; of undefined" type="error"><![CDATA[
+    TypeError: Cannot read property &#39;click&#39; of undefined
+    at Object.Make the most expensive car (C:\Users\Administrator\devmountain\automationPrac\mercedes\tests\mercedesTest.js:71:13)
+    at Context.call (C:\Users\Administrator\AppData\Roaming\npm\node_modules\nightwatch\lib\testsuite\context.js:379:35)
+    at TestCase.run (C:\Users\Administrator\AppData\Roaming\npm\node_modules\nightwatch\lib\testsuite\testcase.js:49:31)
+    at Runnable.__runFn (C:\Users\Administrator\AppData\Roaming\npm\node_modules\nightwatch\lib\testsuite\index.js:376:80)
+    at Runnable.run (C:\Users\Administrator\AppData\Roaming\npm\node_modules\nightwatch\lib\testsuite\runnable.js:123:21)
+    at TestSuite.createRunnable (C:\Users\Administrator\AppData\Roaming\npm\node_modules\nightwatch\lib\testsuite\index.js:443:33)
+    at TestSuite.handleRunnable (C:\Users\Administrator\AppData\Roaming\npm\node_modules\nightwatch\lib\testsuite\index.js:448:18)
+    at C:\Users\Administrator\AppData\Roaming\npm\node_modules\nightwatch\lib\testsuite\index.js:376:21
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async DefaultRunner.runTestSuite (C:\Users\Administrator\AppData\Roaming\npm\node_modules\nightwatch\lib\runner\test-runners\default.js:68:7)
+    ]]></error>
     
     </testcase>
   
 
   
+    <system-err>
+        TypeError: Cannot read property &#39;click&#39; of undefined
+       at Object.Make the most expensive car (C:\Users\Administrator\devmountain\automationPrac\mercedes\tests\mercedesTest.js:71:13)
+       at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    </system-err>
+  
 
     
 
+  
+    
+    <testcase
+      name="Quincy Dream Car" classname="mercedesTest">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Bri Dream Car" classname="mercedesTest">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Kyle Dream Car" classname="mercedesTest">
+      <skipped />
+    </testcase>
+    
   
   </testsuite>
 </testsuites>
