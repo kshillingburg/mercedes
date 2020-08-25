@@ -22,9 +22,8 @@ module.exports = {
             .click('@interior')
             .makeChanges('@blackExclusiveLeather')
             .makeChanges('@carbonFiber')
-            .makeChanges('@checkBox1')
             .makeChanges('@checkBox3')
-            .makeChanges('@checkBox4')
+            .makeChanges('@checkBox5')
             .makeChanges('@checkBox8')
             .makeChanges('@checkBox9')
             .makeChanges('@checkBox10')
@@ -125,5 +124,8 @@ module.exports = {
             .makeChanges('@checkBox8')
             .click('@nextButton')
             .expect.element('@totalBuild').text.to.contain('Total Build $98,524')
-        }
+       },
+       'Kyle Dream Car': browser => {
+
+       }
     }
