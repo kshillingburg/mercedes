@@ -26,7 +26,7 @@ module.exports = {
             .makeChanges('@checkBox1')
             .makeChanges('@checkBox2')
             .makeChanges('@checkBox4')
-
+            costSummaries(mercedes)
             //interior
         mercedes            
             .click('@interior')
@@ -37,7 +37,7 @@ module.exports = {
             .makeChanges('@checkBox8')
             .makeChanges('@checkBox9')
             .makeChanges('@checkBox10')
-
+            costSummaries(mercedes)
             //entertainment
         mercedes
             .click('@entertainmentAndConvenience')
@@ -53,7 +53,7 @@ module.exports = {
             .makeChanges('@checkBox16')
             .makeChanges('@checkBox17')
             .makeChanges('@checkBox18')
-
+            costSummaries(mercedes)
             //performance
         mercedes
             .click('@performanceAndSafety')
@@ -65,7 +65,7 @@ module.exports = {
             .makeChanges('@checkBox10')
             .makeChanges('@checkBox11')
             .makeChanges('@checkBox12')
-
+            costSummaries(mercedes)
             //service
         mercedes
             .click('@serviceAndCare')
@@ -75,6 +75,7 @@ module.exports = {
             .makeChanges('@checkBox7')
             .makeChanges('@checkBox8')
             .makeChanges('@checkBox9')
+            costSummaries(mercedes)
         mercedes
             .click('@summary')
             .expect.element('@totalBuild').text.to.contain("Total Build $117,211.5")
@@ -119,14 +120,14 @@ module.exports = {
             .makeChanges('@checkBox2')
             .makeChanges('@checkBox3')
             costSummaries(mercedes)
-            mercedes.click('@nextButton')
+        mercedes.click('@nextButton')
             .pause(500)
             .makeChanges('@blackNappaLeather')
             .makeChanges('@greyOak')
             .makeChanges('@checkBox7')
             .makeChanges('@checkBox8')
             costSummaries(mercedes)
-            mercedes.click('@nextButton')
+        mercedes.click('@nextButton')
             .makeChanges('@checkBox4')
             .makeChanges('@checkBox5')
             .makeChanges('@checkBox6')
@@ -136,15 +137,15 @@ module.exports = {
             .makeChanges('@checkBox12')
             .makeChanges('@checkBox15')
             costSummaries(mercedes)
-            mercedes.click('@nextButton')
+        mercedes.click('@nextButton')
             .makeChanges('@checkBox10')
             costSummaries(mercedes)
-            mercedes.click('@nextButton')
+        mercedes.click('@nextButton')
             .makeChanges('@checkBox3')
             .makeChanges('@checkBox7')
             .makeChanges('@checkBox8')
             costSummaries(mercedes)
-            mercedes.click('@nextButton')
+        mercedes.click('@nextButton')
             .expect.element('@totalBuild').text.to.contain('Total Build $98,524')
        },
        'Kyle Dream Car': browser => {
@@ -152,14 +153,14 @@ module.exports = {
                 //exterior
                 .makeChanges('@brilliantBlue')
                 .makeChanges('@wheels21inchBlack')
-                console.log('@runningTotalBuild')
+                costSummaries(mercedes)
                 //interior
             mercedes
                 .click('@interior')
                 .makeChanges('@classicRedBlackNappa')
                 .makeChanges('@aluminumGrain')
                 .makeChanges('@checkBox3')
-                console.log('@runningTotalBuild')
+                costSummaries(mercedes)
                 //Entertainment
             mercedes
                 .click('@entertainmentAndConvenience')
@@ -170,7 +171,7 @@ module.exports = {
                 .makeChanges('@checkBox10')
                 .makeChanges('@checkBox12')
                 .makeChanges('@checkBox18')
-                console.log('@runningTotalBuild')
+                costSummaries(mercedes)
                 //Performance
             mercedes
                 .click('@performanceAndSafety')
@@ -178,7 +179,7 @@ module.exports = {
                 .makeChanges('@checkBox5')
                 .makeChanges('@checkBox7')
                 .makeChanges('@checkBox10')
-                console.log('@runningTotalBuild')
+                costSummaries(mercedes)
                 //Service
             mercedes
                 .click('@serviceAndCare')
@@ -188,7 +189,7 @@ module.exports = {
                 .makeChanges('@checkBox6')
                 .makeChanges('@checkBox7')
                 .makeChanges('@checkBox8')
-                console.log('@runningTotalBuild')
+                costSummaries(mercedes)
                 //Summary
             mercedes
                 .click('@summary')
