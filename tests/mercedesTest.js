@@ -1,5 +1,13 @@
 var mercedes = {}
 
+//Callback
+var costSummaries = function (manager) {
+    manager
+        .getText('@runningTotalBuild', function (result) {
+            console.log(result.value)
+        })
+}
+
 module.exports = {
     beforeEach: browser => {
         mercedes = browser.page.mercedesObjects()
@@ -18,6 +26,9 @@ module.exports = {
             .makeChanges('@checkBox1')
             .makeChanges('@checkBox2')
             .makeChanges('@checkBox4')
+            costSummaries(mercedes)
+            //interior
+        mercedes            
             .click('@interior')
             .makeChanges('@blackExclusiveLeather')
             .makeChanges('@carbonFiber')
@@ -26,12 +37,11 @@ module.exports = {
             .makeChanges('@checkBox8')
             .makeChanges('@checkBox9')
             .makeChanges('@checkBox10')
+            costSummaries(mercedes)
+            //entertainment
+        mercedes
             .click('@entertainmentAndConvenience')
-            .makeChanges('@checkBox1')
             .makeChanges('@checkBox3')
-            .makeChanges('@checkBox4')
-            .makeChanges('@checkBox5')
-            .makeChanges('@checkBox6')
             .makeChanges('@checkBox7')
             .makeChanges('@checkBox8')
             .makeChanges('@checkBox9')
@@ -43,18 +53,21 @@ module.exports = {
             .makeChanges('@checkBox16')
             .makeChanges('@checkBox17')
             .makeChanges('@checkBox18')
+            costSummaries(mercedes)
+            //performance
+        mercedes
             .click('@performanceAndSafety')
             .makeChanges('@checkBox1')
             .makeChanges('@checkBox2')
-            .makeChanges('@checkBox3')
             .makeChanges('@checkBox4')
             .makeChanges('@checkBox6')
-            .makeChanges('@checkBox7')
-            .makeChanges('@checkBox8')
             .makeChanges('@checkBox9')
             .makeChanges('@checkBox10')
             .makeChanges('@checkBox11')
             .makeChanges('@checkBox12')
+            costSummaries(mercedes)
+            //service
+        mercedes
             .click('@serviceAndCare')
             .makeChanges('@checkBox3')
             .makeChanges('@checkBox4')
@@ -62,22 +75,24 @@ module.exports = {
             .makeChanges('@checkBox7')
             .makeChanges('@checkBox8')
             .makeChanges('@checkBox9')
+            costSummaries(mercedes)
+        mercedes
             .click('@summary')
-            .expect.element('@totalBuild').text.to.equal('Total Build $117,211.5')
+            .expect.element('@totalBuild').text.to.contain("Total Build $117,211.5")
     },
-
-
     'Quincy Dream Car': browser => {
         mercedes
             .makeChanges('@obsidianBlack')
             .makeChanges('@wheels22inchBlack')
             .makeChanges('@checkBox1')
-            .click('@nextButton')
+            costSummaries(mercedes)
+            mercedes.click('@nextButton')
             .makeChanges('@blackNappaLeather')
             .makeChanges('@designoFlamedAsh')
             .makeChanges('@checkBox1')
             .makeChanges('@checkBox6')
-            .click('@nextButton')
+            costSummaries(mercedes)
+            mercedes.click('@nextButton')
             .makeChanges('@checkBox1')
             .makeChanges('@checkBox4')
             .makeChanges('@checkBox8')
@@ -85,7 +100,8 @@ module.exports = {
             .makeChanges('@checkBox15')
             .makeChanges('@checkBox17')
             .makeChanges('@checkBox18')
-            .click('@nextButton')
+            costSummaries(mercedes)
+            mercedes.click('@nextButton')
             .makeChanges('@checkBox1')
             .makeChanges('@checkBox10')
             .makeChanges('@nextButton')
@@ -95,8 +111,93 @@ module.exports = {
             .makeChanges('@checkBox6')
             .makeChanges('@checkBox7')
             .makeChanges('@checkBox8')
-            .click('@nextButton')
+            costSummaries(mercedes)
+            mercedes.click('@nextButton')
             .expect.element('@totalBuild').text.to.contain('Total Build $95,604')
-    }
+        },
+        'Bri Dream Car': browser => {
+            mercedes
+            .waitForElementVisible('@polarWhite')
+            .makeChanges('@polarWhite')
+            .makeChanges('@wheels22inchBlack')
+            .makeChanges('@checkBox1')
+            .makeChanges('@checkBox2')
+            .makeChanges('@checkBox3')
+            costSummaries(mercedes)
+        mercedes.click('@nextButton')
+            .pause(500)
+            .makeChanges('@blackNappaLeather')
+            .makeChanges('@greyOak')
+            .makeChanges('@checkBox7')
+            .makeChanges('@checkBox8')
+            costSummaries(mercedes)
+        mercedes.click('@nextButton')
+            .makeChanges('@checkBox4')
+            .makeChanges('@checkBox5')
+            .makeChanges('@checkBox6')
+            .makeChanges('@checkBox7')
+            .makeChanges('@checkBox8')
+            .makeChanges('@checkBox10')
+            .makeChanges('@checkBox12')
+            .makeChanges('@checkBox15')
+            costSummaries(mercedes)
+        mercedes.click('@nextButton')
+            .makeChanges('@checkBox10')
+            costSummaries(mercedes)
+        mercedes.click('@nextButton')
+            .makeChanges('@checkBox3')
+            .makeChanges('@checkBox7')
+            .makeChanges('@checkBox8')
+            costSummaries(mercedes)
+        mercedes.click('@nextButton')
+            .expect.element('@totalBuild').text.to.contain('Total Build $98,524')
+       },
+       'Kyle Dream Car': browser => {
+            mercedes
+                //exterior
+                .makeChanges('@brilliantBlue')
+                .makeChanges('@wheels21inchBlack')
+                costSummaries(mercedes)
+                //interior
+            mercedes
+                .click('@interior')
+                .makeChanges('@classicRedBlackNappa')
+                .makeChanges('@aluminumGrain')
+                .makeChanges('@checkBox3')
+                costSummaries(mercedes)
+                //Entertainment
+            mercedes
+                .click('@entertainmentAndConvenience')
+                .makeChanges('@checkBox2')
+                .makeChanges('@checkBox4')
+                .makeChanges('@checkBox5')
+                .makeChanges('@checkBox9')
+                .makeChanges('@checkBox10')
+                .makeChanges('@checkBox12')
+                .makeChanges('@checkBox18')
+                costSummaries(mercedes)
+                //Performance
+            mercedes
+                .click('@performanceAndSafety')
+                .makeChanges('@checkBox1')
+                .makeChanges('@checkBox5')
+                .makeChanges('@checkBox7')
+                .makeChanges('@checkBox10')
+                costSummaries(mercedes)
+                //Service
+            mercedes
+                .click('@serviceAndCare')
+                .makeChanges('@checkBox1')
+                .makeChanges('@checkBox4')
+                .makeChanges('@checkBox5')
+                .makeChanges('@checkBox6')
+                .makeChanges('@checkBox7')
+                .makeChanges('@checkBox8')
+                costSummaries(mercedes)
+                //Summary
+            mercedes
+                .click('@summary')
+                .expect.element('@totalBuild').text.to.contain('Total Build $96,224')
 
-}
+       }
+    }

@@ -27,6 +27,11 @@ module.exports = {
         
         nextButton: 'button[class="button button_primary button--wide button--full-width-small-only mbs-build-steps__cta"]',
 
+        runningTotalBuild: {
+            selector:'//div[@class="mbs-build-pricing__price-container"]',
+            locateStrategy: 'xpath'
+        },
+
         //navigation labels
         exterior: 'button[id="exterior"]',
         interior: 'button[id="interior"]',
@@ -47,8 +52,8 @@ module.exports = {
         emeraldGreen: 'img[alt="Select Emerald Green metallic"]',
         seleniteGrey: 'img[alt="Select Selenite Grey metallic"]',
         cardinalRed: 'img[alt="Select designo Cardinal Red metallic"]',
-            //wheels
         diamondWhite: 'img[alt="Select designo Diamond White metallic"]',
+        //wheels
         wheels21inch: 'img[alt="Select 21-inch AMG twin 5-spoke"]',
         wheels21inchBlack: 'img[alt="Select 21-inch AMG twin 5-spoke w/black accents"]',
         wheels22inch: {
@@ -86,7 +91,7 @@ module.exports = {
             //trim
         greyLindenWood: '[alt="Select Grey Linden wood"]',
         aluminumGrain: '[alt="Select Aluminum with longitudinal grain"]',
-        GreyOak: '[alt="Select Natural Grain Grey Oak wood"]',
+        greyOak: '[alt="Select Natural Grain Grey Oak wood"]',
         brownWalnut: '[alt="Select Natural Grain Brown Walnut wood"]',
         designoFlamedAsh: '[alt="Select designo Natural Grain Black Flamed Ash wood"]',
         designoBrownLinden: "[src='/content/dam/mb-nafta/us/myco/my20/swatches/trim/BYO-TRIM-THUMBNAIL-H34.jpg']",
