@@ -21,6 +21,7 @@ module.exports = {
     'Make the most expensive car': browser => {
         mercedes
             //exterior
+            .waitForElementVisible('@diamondWhite')
             .makeChanges('@diamondWhite')
             .makeChanges('@wheels22inchBlack')
             .makeChanges('@checkBox1')
@@ -30,6 +31,7 @@ module.exports = {
             //interior
         mercedes            
             .click('@interior')
+            .waitForElementVisible('@blackExclusiveLeather')
             .makeChanges('@blackExclusiveLeather')
             .makeChanges('@carbonFiber')
             .makeChanges('@checkBox3')
@@ -41,6 +43,7 @@ module.exports = {
             //entertainment
         mercedes
             .click('@entertainmentAndConvenience')
+            .waitForElementVisible('@checkBox3')
             .makeChanges('@checkBox3')
             .makeChanges('@checkBox7')
             .makeChanges('@checkBox8')
@@ -82,11 +85,13 @@ module.exports = {
     },
     'Quincy Dream Car': browser => {
         mercedes
+            .waitForElementVisible('@obsidianBlack')
             .makeChanges('@obsidianBlack')
             .makeChanges('@wheels22inchBlack')
             .makeChanges('@checkBox1')
             costSummaries(mercedes)
             mercedes.click('@nextButton')
+            .waitForElementVisible('@blackNappaLeather')
             .makeChanges('@blackNappaLeather')
             .makeChanges('@designoFlamedAsh')
             .makeChanges('@checkBox1')
@@ -125,7 +130,7 @@ module.exports = {
             .makeChanges('@checkBox3')
             costSummaries(mercedes)
             mercedes.click('@nextButton')
-            .pause(500)
+            .waitForElementVisible('@blackNappaLeather')
             .makeChanges('@blackNappaLeather')
             .makeChanges('@greyOak')
             .makeChanges('@checkBox7')
@@ -155,12 +160,14 @@ module.exports = {
        'Kyle Dream Car': browser => {
             mercedes
                 //exterior
+                .waitForElementVisible('@brilliantBlue')
                 .makeChanges('@brilliantBlue')
                 .makeChanges('@wheels21inchBlack')
                 costSummaries(mercedes)
                 //interior
             mercedes
                 .click('@interior')
+                .waitForElementVisible('@classicRedBlackNappa')
                 .makeChanges('@classicRedBlackNappa')
                 .makeChanges('@aluminumGrain')
                 .makeChanges('@checkBox3')
