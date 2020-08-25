@@ -28,7 +28,7 @@ module.exports = {
         nextButton: 'button[class="button button_primary button--wide button--full-width-small-only mbs-build-steps__cta"]',
 
         runningTotalBuild: {
-            selector://div[@class="mbs-build-pricing__price-container"]',
+            selector:'//div[@class="mbs-build-pricing__price-container"]',
             locateStrategy: 'xpath'
         },
 
